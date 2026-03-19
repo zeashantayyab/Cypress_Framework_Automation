@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/zeashantayyab/Cypress_Framework_Automation/issues"
   },
-  "homepage": "https://github.com/zeashantayyab/Cypress_Framework_Automation#readme"
+  "homepage": "https://github.com/zeashantayyab/Cypress_Framework_Automation#readme",
+  "devDependencies": {
+    "cypress": "^15.12.0"
+  }
 }

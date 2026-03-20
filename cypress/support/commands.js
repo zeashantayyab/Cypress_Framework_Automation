@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("getText", { prevSubject: "element" }, ($element) => {
+  cy.wrap($element).scrollIntoView();
+  return cy.wrap($element).invoke("text");
+});
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});

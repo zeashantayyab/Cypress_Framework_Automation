@@ -1,0 +1,60 @@
+{
+  "placeHolder": [
+    
+    
+  {
+    "username":"adeel8800",
+    "password":"Smart786!",
+    "valid": true 
+
+
+  },
+
+
+  {
+
+    "username":" ",
+    "password":"Smart786!",
+    "valid": "emptyUserName"
+  
+  },
+    {
+
+       "username":"adeel8801",
+    "password":"Smart786",
+    "valid": false
+  
+  }
+
+
+],
+  "placeHolderNew": [
+    
+    
+  {
+    "username":"adeel8800",
+    "password":"Smart786!",
+    "valid": true 
+
+
+  }
+
+
+]
+
+,
+  "placeHolder2": [
+    {
+      "course_search":"java",
+      "course_name":"A Complete Guide"
+    },
+    {
+      "course_search":"python",
+      "course_name":"Learn Python 3 from scratch"
+    }
+  ],
+  "placeHolder3": {
+    "course_search":"selenium",
+    "course_name":"Java Step By Step For Testers"
+  }
+}

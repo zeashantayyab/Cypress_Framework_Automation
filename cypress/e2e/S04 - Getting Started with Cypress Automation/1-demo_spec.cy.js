@@ -10,3 +10,4 @@ describe("My First Test", () => {
 
 //need to run npx cypress open in terminal to open the cypress test runner and then click on the demo_spec.cy.js file to run the tests.
 //new branch comment
+//adding config comments

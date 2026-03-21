@@ -5,11 +5,12 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   //reporter: "cypress-mochawesome-reporter",
   screenshotsFolder: "cypress/screenshots",
-  allowCypressEnv: true,
+  allowCypressEnv: true, // This will prevent Cypress from automatically adding environment variables to the test runner UI, which can help keep sensitive information secure.
 
   env: {
     username: "adeel8800",
     password: "Smart786!",
+    baseUrl: "https://training.worldlogisticspassport.com",
   },
 
   e2e: {

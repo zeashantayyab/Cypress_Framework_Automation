@@ -5,6 +5,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   //reporter: "cypress-mochawesome-reporter",
   screenshotsFolder: "cypress/screenshots",
+  videosFolder: "cypress/videos", // This will specify the folder where Cypress saves videos of test runs.
   allowCypressEnv: true, // This will prevent Cypress from automatically adding environment variables to the test runner UI, which can help keep sensitive information secure.
 
   env: {

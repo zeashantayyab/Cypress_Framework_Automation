@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "environmentVariables_demo": "npx cypress run --env username=adeel8800,password=Smart786! --spec cypress/e2e/WLP_Login/WLP_Login.cy.js --headed --browser chrome"
+    "environmentVariables_demo": "npx cypress run --env username=adeel8800,password=Smart786! --spec cypress/e2e/WLP_Login/WLP_Login.cy.js --headed --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zeashantayyab/Cypress_Framework_Automation#readme",
   "devDependencies": {
-    "cypress": "^15.12.0"
+    "cypress": "^15.12.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
   }
 }

@@ -4,7 +4,7 @@
 
 /*cy.fixture('wlp_Login').then((dataNew) => {}),*/
 
-import Locators from './Locators';
+import Locators from "./Locators";
 
 const Locators1 = new Locators();
 
@@ -26,7 +26,7 @@ class LoginPage {
   }
 
   visit() {
-    cy.visit('/smart-cert/#/login');
+    cy.visit("/smart-cert/#/login");
   }
 
   submitButton() {
@@ -35,7 +35,7 @@ class LoginPage {
 
   enterUserName() {
     cy.get(Locators1.LoginPageLocators.usernameInput).type(
-      Cypress.env('username')
+      Cypress.env("username"),
     );
   }
 
@@ -53,10 +53,10 @@ class LoginPage {
   //login functiona with co
   loginUser(username, password, valid) {
     cy.get(Locators1.LoginPageLocators.usernameInput).type(
-      username.replace('{username}', username)
+      username.replace("{username}", username),
     );
     cy.get(Locators1.LoginPageLocators.passwordInput).type(
-      password.replace('{password}', password)
+      password.replace("{password}", password),
     );
     this.submitButton();
     cy.wait(5000);
@@ -67,30 +67,36 @@ class LoginPage {
         force: true,
       });
       this.logOut();
-    } else if (valid == 'emptyUserName') {
-      cy.visit('/smart-cert/#/login');
-      cy.get(Locators1.LoginPageLocators.usernameInput).type('{backspace}');
+    } else if (valid == "emptyUserName") {
+      cy.visit("/smart-cert/#/login");
+      cy.get(Locators1.LoginPageLocators.usernameInput).type("{backspace}");
       cy.get(Locators1.LoginPageLocators.passwordInput).type(password);
       this.submitButton();
       cy.get(Locators1.LoginPageLocators.invalidMessage).then((el) => {
         const invalidMessage = el.text().trim();
-        expect(invalidMessage).to.equal('Please enter your email or username.');
+        expect(invalidMessage).to.equal("Please enter your email or username.");
       });
     } else {
       cy.get(Locators1.LoginPageLocators.invalidMessage).should(
-        'contain',
-        ' Invalid username or password.'
+        "contain",
+        " Invalid username or password.",
       );
     }
   }
 
   inputYourUserName() {
-    cy.get(Locators1.LoginPageLocators.passwordInput).type('Smart786!');
+    cy.get(Locators1.LoginPageLocators.passwordInput).type("Smart786!");
     this.submitButton();
     cy.get(Locators1.LoginPageLocators.inputYourUserNameMessage).then((el) => {
       const inputYourUserNameMessage = el.text().trim();
-      expect(inputYourUserNameMessage).to.equal('Please input your Username!');
+      expect(inputYourUserNameMessage).to.equal("Please input your Username!");
     });
+  }
+
+  clickUploadbutton() {
+    cy.get(Locators1.uploadFileLocators.uploadFileButton).click();
+    cy.get(Locators1.uploadFileLocators.clickNextButton).should("be.visible");
+    cy.get(Locators1.uploadFileLocators.clickNextButton).click();
   }
 }
 

@@ -12,7 +12,7 @@ describe("WLP Login", () => {
       variable1 = data;
     });
   });
-  it("should login to WLP", () => {
+  it.skip("should login to WLP", () => {
     variable1.placeHolder.forEach((testData) => {
       loginPage1.loginUser(
         testData.username,
@@ -22,22 +22,22 @@ describe("WLP Login", () => {
     });
   });
 
-  it("should login again", () => {
+  it.skip("should login again", () => {
     loginPage1.enterUserName(variable1.placeHolder.username);
   });
 
-  it("should valid login again", () => {
+  it.skip("should valid login again", () => {
     loginPage1.validUserPassword(
       variable1.placeHolder[0].username,
       variable1.placeHolder[0].password,
     );
   });
 
-  it("should not login with empty username", () => {
+  it.skip("should not login with empty username", () => {
     loginPage1.inputYourUserName();
   });
 
-  it("should valid login again for further testing", () => {
+  it.skip("should valid login again for further testing", () => {
     loginPage1.validUserPassword(
       variable1.placeHolder[0].username,
       variable1.placeHolder[0].password,

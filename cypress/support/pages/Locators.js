@@ -14,6 +14,7 @@ class Locators {
     this.uploadFileLocators = {
       uploadFileButton: ".button.secondary", //if there is space between words use "." and for multiple class use "." between them
       clickNextButton: ".button.primary",
+      uploadFile: 'div.mat-grid-tile-content .info-box .val input[type="file"]',
     };
   }
 }

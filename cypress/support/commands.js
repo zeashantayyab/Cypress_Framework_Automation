@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//import "cypress-file-upload";
 
 Cypress.Commands.add("getText", { prevSubject: "element" }, ($element) => {
   cy.wrap($element).scrollIntoView();

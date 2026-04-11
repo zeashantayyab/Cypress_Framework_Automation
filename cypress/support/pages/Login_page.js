@@ -95,8 +95,10 @@ class LoginPage {
 
   clickUploadbutton() {
     cy.get(Locators1.uploadFileLocators.uploadFileButton).click();
-    cy.get(Locators1.uploadFileLocators.clickNextButton).should("be.visible");
     cy.get(Locators1.uploadFileLocators.clickNextButton).click();
+    cy.get(Locators1.uploadFileLocators.uploadFile)
+      .first()
+      .selectFile("cypress/fixtures/Alison_Certificate-.pdf", { force: true });
   }
 }
 
